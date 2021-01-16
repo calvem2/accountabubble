@@ -61,6 +61,7 @@
   padding-bottom: 10%;
   color: #92bdc7;
   font-weight: bold;
+  margin-left: 5px;
 }
 
 /* Format the progress bar */
@@ -89,6 +90,8 @@ progress[value]::-webkit-progress-bar {
 .week-days {
   min-width: 0;
   width: 12%;
+  margin: 5px;
+  flex: 1 0 auto;
   min-height: 500px;
   border: solid 1px #92bdc7;
   border-radius: 10px;
@@ -99,9 +102,7 @@ progress[value]::-webkit-progress-bar {
 
 /* On hover of the week days */
 .week-days:hover {
-  width: 16%;
-  /* border: solid 4px #92bdc7; */
-  /* border-radius: 10px; */
+  flex: 2 0 auto;
 }
 
 .week-days h3 { 
@@ -111,8 +112,6 @@ progress[value]::-webkit-progress-bar {
     color: #757373;
     font-weight: 500;
 }
-
-
 
 /* Style the accountabubble title text */
 h2 {
@@ -143,7 +142,6 @@ h2 {
   text-align: left;
 }
 
-
 /* Style the current day */
 .selected-day h3, .selected-day .tasks, .selected-day .assignee { 
   color: white;
@@ -155,6 +153,7 @@ h2 {
 }
 
 .selected-day {
+  flex: 2 0 auto;
   color: white;
   background-color: #92bdc7;
   width: 18%;
@@ -162,6 +161,7 @@ h2 {
 
 /* On hover of the week days */
 .selected-day:hover {
+  flex: 3 0 auto;
   width: 19%;
   border: solid 4px #92bdc7;
   border-radius: 10px;
@@ -209,4 +209,72 @@ h2 {
   left: 10%;
   right: 10%;
   cursor: pointer;
+}
+
+/* Style the logo */
+.logo {
+  width: 50px;
+  height: 40px;
+  float: left;
+  padding-top: 1.5%;
+}
+
+/* Style the checkboxes */
+.round {
+  position: relative;
+  display: inline-block;
+}
+
+.round label {
+  background-color: #fff;
+  border: 1px solid #3b93a6;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 14px;
+  left: 0;
+  position: absolute;
+  top: 3px;
+  width: 14px;
+}
+
+.round label:after {
+  border: 2px solid #fff;
+  border-top: none;
+  border-right: none;
+  content: "";
+  height: 3px;
+  left: 3px;
+  opacity: 0;
+  position: absolute;
+  top: 4px;
+  transform: rotate(-45deg);
+  width: 6px;
+}
+
+.round input[type="checkbox"] {
+  visibility: hidden;
+}
+
+.round input[type="checkbox"]:checked + label {
+  background-color: #dbdbdb;
+  border-color: #dbdbdb;
+}
+
+.round input[type="checkbox"]:checked + label:after {
+  opacity: 1;
+}
+
+.task-text {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.selected-day .round input[type="checkbox"]:checked + label {
+  background-color: #5d7c83;
+  border-color: #5d7c83;
+}
+
+.selected-day .round label { 
+  border: 1px solid white;
+  background-color: #92bdc7;
 }

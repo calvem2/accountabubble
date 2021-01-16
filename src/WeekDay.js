@@ -20,7 +20,32 @@ class WeekDay extends Component {
                     }</div>
                     {this.props.tasks.filter(task => {
                         return task.assignee === assignees[i];
-                    }).map(task => <div class="tasks">{task.name}</div>)}
+                    }).map(task => {   
+                        if (assignees[i] === this.props.profileName && task.completed && !this.props.isCurrDay) {                   
+                            return(<div class="tasks">
+                                        <div class="round">
+                                            <input type="checkbox" id={task.name + task.assignee + task.day} checked="checked"/>
+                                            <label for={task.name + task.assignee + task.day}></label>
+                                        </div>
+                                        <div class="task-text">
+                                            {task.name}
+                                        </div>
+                                    </div>);
+                        } else if (assignees[i] === this.props.profileName) {                   
+                            return(<div class="tasks">
+                                        <div class="round">
+                                            <input type="checkbox" id={task.name + task.assignee + task.day}/>
+                                            <label for={task.name + task.assignee + task.day}></label>
+                                        </div>
+                                        <div class="task-text">
+                                            {task.name}
+                                        </div>
+                                    </div>);
+                        } else {
+                            return(<div class="tasks">
+                                        {task.name}
+                                  </div>);
+                        }})}
                 </div>
             );
         }
@@ -29,7 +54,6 @@ class WeekDay extends Component {
             'selected-day': this.props.isCurrDay
         })
 
-        console.log(this.props.isCurrDay);
         return (
             <div className={classNames}>
                 <h3>{this.props.day}</h3>

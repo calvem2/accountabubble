@@ -33,7 +33,7 @@ function App() {
 
   return (
     <div className="App">
-      <img src={logo} alt="Accountabubble logo"/>
+      <img class="logo" src={logo} alt="Accountabubble logo"/>
      {/* Add logo here */}
      <h2>accountabubble</h2> 
      <ProgressBar tasks={tasks}/>
