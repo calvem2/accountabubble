@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/accountabubble/static/css/main.38766aa7.chunk.css",
-    "main.js": "/accountabubble/static/js/main.fd026d0a.chunk.js",
-    "main.js.map": "/accountabubble/static/js/main.fd026d0a.chunk.js.map",
-    "runtime-main.js": "/accountabubble/static/js/runtime-main.9c244fc4.js",
-    "runtime-main.js.map": "/accountabubble/static/js/runtime-main.9c244fc4.js.map",
-    "static/js/2.3d6d613f.chunk.js": "/accountabubble/static/js/2.3d6d613f.chunk.js",
-    "static/js/2.3d6d613f.chunk.js.map": "/accountabubble/static/js/2.3d6d613f.chunk.js.map",
-    "static/js/3.ea6cb52f.chunk.js": "/accountabubble/static/js/3.ea6cb52f.chunk.js",
-    "static/js/3.ea6cb52f.chunk.js.map": "/accountabubble/static/js/3.ea6cb52f.chunk.js.map",
+    "main.css": "/accountabubble/static/css/main.abe4f741.chunk.css",
+    "main.js": "/accountabubble/static/js/main.394dace0.chunk.js",
+    "main.js.map": "/accountabubble/static/js/main.394dace0.chunk.js.map",
+    "runtime-main.js": "/accountabubble/static/js/runtime-main.3bf9c7c8.js",
+    "runtime-main.js.map": "/accountabubble/static/js/runtime-main.3bf9c7c8.js.map",
+    "static/js/2.837ff1a6.chunk.js": "/accountabubble/static/js/2.837ff1a6.chunk.js",
+    "static/js/2.837ff1a6.chunk.js.map": "/accountabubble/static/js/2.837ff1a6.chunk.js.map",
+    "static/js/3.17f97e52.chunk.js": "/accountabubble/static/js/3.17f97e52.chunk.js",
+    "static/js/3.17f97e52.chunk.js.map": "/accountabubble/static/js/3.17f97e52.chunk.js.map",
     "index.html": "/accountabubble/index.html",
-    "static/css/main.38766aa7.chunk.css.map": "/accountabubble/static/css/main.38766aa7.chunk.css.map",
-    "static/js/2.3d6d613f.chunk.js.LICENSE.txt": "/accountabubble/static/js/2.3d6d613f.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/accountabubble/static/media/logo.6ce24c58.svg"
+    "static/css/main.abe4f741.chunk.css.map": "/accountabubble/static/css/main.abe4f741.chunk.css.map",
+    "static/js/2.837ff1a6.chunk.js.LICENSE.txt": "/accountabubble/static/js/2.837ff1a6.chunk.js.LICENSE.txt",
+    "static/media/logo.983c4258.png": "/accountabubble/static/media/logo.983c4258.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.9c244fc4.js",
-    "static/js/2.3d6d613f.chunk.js",
-    "static/css/main.38766aa7.chunk.css",
-    "static/js/main.fd026d0a.chunk.js"
+    "static/js/runtime-main.3bf9c7c8.js",
+    "static/js/2.837ff1a6.chunk.js",
+    "static/css/main.abe4f741.chunk.css",
+    "static/js/main.394dace0.chunk.js"
   ]
 }
