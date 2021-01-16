@@ -1,5 +1,9 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 .App {
   text-align: center;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .App-logo {
@@ -54,16 +58,19 @@
 /* Format the daily tasks */
 .tasks {
   text-align: left;
-  padding: 5px;
+  padding-left: 6%;
+  padding-bottom: 10%;
+  color: #92bdc7;
+  font-weight: 1000;
 }
 
 /* Format the progress bar */
 progress[value] {
-  margin-top: 3%;
   -webkit-appearance: none;
   appearance: none;
   width: 90%;
   height: 40px;
+  margin-bottom: 1%;
 }
 
 progress[value]::-webkit-progress-value {
@@ -84,15 +91,26 @@ progress[value]::-webkit-progress-bar {
   min-width: 0;
   width: 13%;
   min-height: 500px;
-  border: solid 2px #92bdc7;
+  border: solid 1px #757373;
   border-radius: 4px;
-  /* overflow: hidden; */
   overflow-x: hidden;
-  /* overflow-y: auto; */
+}
+
+/* On hover of the week days */
+.week_days:hover {
+  width: 16%;
+  border: solid 4px #757373;
+  border-radius: 4px;
 }
 
 .week_days h3 { 
     padding: 15px;
     margin: auto;
     display: block;
+    color: #757373;
+}
+
+h2 {
+  padding: 2%;
+  color: #92bdc7;
 }
