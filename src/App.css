@@ -1,6 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,600&display=swap');
 .App {
   text-align: center;
   font-family: 'Montserrat', sans-serif;
@@ -61,7 +60,7 @@
   padding-left: 6%;
   padding-bottom: 10%;
   color: #92bdc7;
-  font-weight: 1000;
+  font-weight: bold;
 }
 
 /* Format the progress bar */
@@ -75,42 +74,139 @@ progress[value] {
 
 progress[value]::-webkit-progress-value {
   background-color: #92bdc7;
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
   
 }
 
 progress[value]::-webkit-progress-bar {
   background-color: #eee;
-  border-radius: 4px;
+  border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
   /* border: solid 1px #92bdc7; */
 }
 
-.week_days {
+.week-days {
   min-width: 0;
-  width: 13%;
+  width: 12%;
   min-height: 500px;
-  border: solid 1px #757373;
-  border-radius: 4px;
+  border: solid 1px #92bdc7;
+  border-radius: 10px;
   overflow-x: hidden;
+  overflow-y: hidden;
+  position: relative;
 }
 
 /* On hover of the week days */
-.week_days:hover {
+.week-days:hover {
   width: 16%;
-  border: solid 4px #757373;
-  border-radius: 4px;
+  /* border: solid 4px #92bdc7; */
+  /* border-radius: 10px; */
 }
 
-.week_days h3 { 
+.week-days h3 { 
     padding: 15px;
     margin: auto;
     display: block;
     color: #757373;
+    font-weight: 500;
 }
 
+
+
+/* Style the accountabubble title text */
 h2 {
   padding: 2%;
+  color: #3B93A6;
+  font-weight: bold;
+  text-align: left;
+}
+
+/* Style the group of tasks per person */
+.task_group {
+  padding-bottom: 5%;
+}
+
+.tasks {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.assignee {
   color: #92bdc7;
+  font-weight: 500;
+  border: solid 1px #92bdc7;
+  padding: 3%;
+  margin: 6%;
+  font-size: 18px;
+  padding-left: 8%;
+  text-align: left;
+}
+
+
+/* Style the current day */
+.selected-day h3, .selected-day .tasks, .selected-day .assignee { 
+  color: white;
+}
+
+.selected-day .assignee {
+  border: solid 1px white;
+  box-shadow: 3px 3px white;
+}
+
+.selected-day {
+  color: white;
+  background-color: #92bdc7;
+  width: 18%;
+}
+
+/* On hover of the week days */
+.selected-day:hover {
+  width: 19%;
+  border: solid 4px #92bdc7;
+  border-radius: 10px;
+}
+
+.week-days .add-task:hover {
+  position: absolute;
+  bottom: 2%;
+  color: white;
+  font-style: italic;
+  border: solid 1px white;
+  background-color: #92bdc7;
+  border-radius: 10px;
+  padding: 5%;
+  left: 10%;
+  right: 10%;
+  cursor: pointer;
+}
+
+/* Position the add task button */
+.week-days .add-task, .selected-day .add-task:hover  {
+  position: absolute;
+  bottom: 2%;
+  color: #92bdc7;
+  font-style: italic;
+  border: solid 1px #92bdc7;
+  background-color: white;
+  border-radius: 10px;
+  padding: 5%;
+  left: 10%;
+  right: 10%;
+  cursor: pointer;
+}
+
+/* Position the add task button */
+.selected-day .add-task {
+  position: absolute;
+  bottom: 2%;
+  color: white;
+  font-style: italic;
+  border: solid 1px white;
+  background-color: #92bdc7;
+  border-radius: 10px;
+  padding: 5%;
+  left: 10%;
+  right: 10%;
+  cursor: pointer;
 }
