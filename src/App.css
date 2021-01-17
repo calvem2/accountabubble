@@ -278,3 +278,12 @@ h2 {
   border: 1px solid white;
   background-color: #92bdc7;
 }
+
+.task-text.clicked {
+  text-decoration: line-through;
+  color: #dbdbdb;
+}
+
+.selected-day .task-text.clicked {
+  color: #5d7c83;
+}

@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import Task from "./Task";
 let cx = require('classnames');
 
 class WeekDay extends Component {
 
     render() {
+        let weekdays = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
+
         // Filter tasks based on assignees
         let assignees = [...new Set(this.props.tasks.map(task => task.assignee))];
         assignees.splice(assignees.indexOf(this.props.profileName), 1);
@@ -20,39 +23,42 @@ class WeekDay extends Component {
                     }</div>
                     {this.props.tasks.filter(task => {
                         return task.assignee === assignees[i];
-                    }).map(task => {   
-                        if (assignees[i] === this.props.profileName && task.completed && !this.props.isCurrDay) {                   
-                            return(<div class="tasks">
-                                        <div class="round">
-                                            <input type="checkbox" id={task.name + task.assignee + task.day} checked="checked"/>
-                                            <label for={task.name + task.assignee + task.day}></label>
-                                        </div>
-                                        <div class="task-text">
-                                            {task.name}
-                                        </div>
-                                    </div>);
-                        } else if (assignees[i] === this.props.profileName) {                   
-                            return(<div class="tasks">
-                                        <div class="round">
-                                            <input type="checkbox" id={task.name + task.assignee + task.day}/>
-                                            <label for={task.name + task.assignee + task.day}></label>
-                                        </div>
-                                        <div class="task-text">
-                                            {task.name}
-                                        </div>
-                                    </div>);
+                    }).map(task => {
+                        if (assignees[i] === this.props.profileName) {
+                            return <Task onChange={this.props.onChange} name={task.name} day={task.day} assignee={task.assignee} currDay={this.props.currDay} completed={task.completed} checkbox={true}/>
+                            // return(<div class="tasks">
+                            //             <div class="round">
+                            //                 <input type="checkbox" id={task.name + task.assignee + task.day} checked="checked"/>
+                            //                 <label for={task.name + task.assignee + task.day}></label>
+                            //             </div>
+                            //             <div class="task-text">
+                            //                 {task.name}
+                            //             </div>
+                            //         </div>);
+                        // } else if (assignees[i] === this.props.profileName) {
+                        //     return <Task onChange={this.props.onChange} name={task.name} day={task.day} assignee={task.assignee} currDay={this.props.currDay} completed={task.completed} checkbox={true}/>
+                            // return(<div class="tasks">
+                            //             <div class="round">
+                            //                 <input type="checkbox" id={task.name + task.assignee + task.day}/>
+                            //                 <label for={task.name + task.assignee + task.day}></label>
+                            //             </div>
+                            //             <div class="task-text">
+                            //                 {task.name}
+                            //             </div>
+                            //         </div>);
                         } else {
-                            return(<div class="tasks">
-                                        {task.name}
-                                  </div>);
+                            return <Task onChange={this.props.onChange} name={task.name} day={task.day} assignee={task.assignee} currDay={this.props.currDay} completed={task.completed} checkbox={false}/>
+                            // return(<div class="tasks">
+                            //             {task.name}
+                            //       </div>);
                         }})}
                 </div>
             );
         }
         let classNames = cx({
             'week-days': true,
-            'selected-day': this.props.isCurrDay
-        })
+            'selected-day': weekdays.indexOf(this.props.currDay) === weekdays.indexOf(this.props.day)
+        });
 
         return (
             <div className={classNames}>

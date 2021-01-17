@@ -2,15 +2,20 @@ import React, { Component } from 'react';
 
 
 class ProgressBar extends Component {
+    // props
+    // tasks (list of tasks)
+
+    // # completed
+    // total #
 
     render() {
-        let completed = this.props.tasks.filter(task => {
-            return task.completed;
-        });
+        // let completed = this.props.tasks.filter(task => {
+        //     return task.completed;
+        // });
 
         return (
             <div>
-                <progress value={completed.length} max={this.props.tasks.length}>
+                <progress value={this.props.completed} max={this.props.total}>
                 </progress>
             </div>
         );
