@@ -13,7 +13,7 @@ Once you're done with that, if you wanted to click around with the weekly overvi
 We hope you enjoy!
 
 ### Team Members:
-* Claire Beard  
-* Megan Calverley  
-* Ash Shah
+* claire beard  
+* megan calverley  
+* ash shah
 

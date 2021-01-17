@@ -87,13 +87,37 @@ progress[value]::-webkit-progress-bar {
   /* border: solid 1px #92bdc7; */
 }
 
+.flex-container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#budbles {
+  font-weight: normal;
+  margin: 0;
+}
+
+#weekly-progress, #percent {
+  /*display: inline-block;*/
+  font-weight: 500;
+  color: #c4c4c4;
+}
+
+#percent {
+  color: #92bdc7;
+}
+
 .week-days {
   min-width: 0;
   width: 12%;
   margin: 5px;
   flex: 1 0 auto;
   min-height: 500px;
-  border: solid 1px #92bdc7;
+  border: solid 2px #92bdc7;
   border-radius: 10px;
   overflow-x: hidden;
   overflow-y: hidden;
@@ -102,7 +126,7 @@ progress[value]::-webkit-progress-bar {
 
 /* On hover of the week days */
 .week-days:hover {
-  flex: 2 0 auto;
+  /*flex: 2 0 auto;*/
 }
 
 .week-days h3 { 
@@ -111,6 +135,7 @@ progress[value]::-webkit-progress-bar {
     display: block;
     color: #757373;
     font-weight: 500;
+    font-size: 18pt;
 }
 
 /* Style the accountabubble title text */
@@ -161,10 +186,10 @@ h2 {
 
 /* On hover of the week days */
 .selected-day:hover {
-  flex: 3 0 auto;
-  width: 19%;
-  border: solid 4px #92bdc7;
-  border-radius: 10px;
+  /*flex: 3 0 auto;*/
+  /*width: 19%;*/
+  /*border: solid 4px #92bdc7;*/
+  /*border-radius: 10px;*/
 }
 
 .week-days .add-task:hover {
@@ -212,10 +237,14 @@ h2 {
 }
 
 /* Style the logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
 .logo {
   width: 50px;
   height: 40px;
-  float: left;
   padding-top: 1.5%;
 }
 
@@ -286,4 +315,27 @@ h2 {
 
 .selected-day .task-text.clicked {
   color: #5d7c83;
+}
+.footer-container {
+  margin-bottom: 50px;
+}
+
+.footer-container img, .footer-container div {
+  display: inline-block;
+  text-align: left;
+}
+
+.footer-container img{
+  height: 60px;
+  width: 70px;
+}
+
+.footer-container div {
+  margin-left: 10px;
+  color: #757373;
+  height: 60px;
+}
+
+a {
+  color: #757373;
 }

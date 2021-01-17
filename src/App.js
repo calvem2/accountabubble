@@ -21,8 +21,7 @@ class App extends Component {
 
                 {name:"write article", assignee:"ash", day:"monday", completed:true},
                 {name:"editor meeting", assignee:"ash", day:"monday", completed:true},
-                {name:"email TA", assignee:"ash", day:"monday", completed:true},
-                {name:"change zoom background", assignee:"claire", day:"monday", completed:true},
+                {name:"zoom background", assignee:"claire", day:"monday", completed:true},
                 {name:"walk teagan", assignee:"claire", day:"monday", completed:true},
                 {name:"help laura w hw", assignee:"claire", day:"monday", completed:true},
                 {name:"go on a walk", assignee:"megan", day:"monday", completed:true},
@@ -134,16 +133,36 @@ class App extends Component {
               })}/>
             )
         }
+        let percent = Math.round(this.state.completed / this.state.total * 100);
+        percent += "%";
         return (
             <div className="App">
-              <img class="logo" src={logo} alt="Accountabubble logo"/>
-              {/* Add logo here */}
-              <h2>accountabubble</h2>
-              <ProgressBar completed={this.state.completed} total={this.state.total}/>
-              {/* Week days */}
-              <div class="flex">
-                  {days}
-              </div>
+                <div class="flex-container">
+                    <div class="logo-container">
+                        <img className="logo" src={logo} alt="Accountabubble logo"/>
+                        <h2>accountabubble</h2>
+                    </div>
+                    <h2 id="budbles">
+                        Team Budbles
+                    </h2>
+                </div>
+
+                <div class="flex-container">
+                    <h3 id="weekly-progress">weekly progress</h3>
+                    <h3 id="percent">{percent}</h3>
+                </div>
+                <ProgressBar completed={this.state.completed} total={this.state.total}/>
+                <div class="flex">
+                    {days}
+                </div>
+                <div className="footer-container">
+                    <img className="logo" src={logo} alt="Accountabubble logo"/>
+                    <div>
+                        <p><a href="https://www.figma.com/file/TXE6KpD0hn5uJkiQiBa8kV/accountabubble?node-id=0%3A1" target="_blank">designed</a> by ash shah</p>
+                        <p><a href="https://github.com/calvem2/accountabubble" target="_blank">built</a> by claire beard & megan calverley</p>
+                    </div>
+                </div>
+
             </div>
         );
     }
